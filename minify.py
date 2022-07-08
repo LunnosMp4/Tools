@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# Copyright (c) 2022, Lunnos
+# https://github.com/LunnosMp4/Minify
+# License: MIT
 
 import sys, requests
 
