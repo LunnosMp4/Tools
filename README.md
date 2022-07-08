@@ -38,4 +38,4 @@ Of course, if the file exists the result will be written in it, otherwise it wil
 
 ## API
 
-This program use the API from www.toptal.com.
+This program use the API from www.toptal.com for css / js and html langages.
