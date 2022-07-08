@@ -5,7 +5,9 @@ I hope it will save you some time too !</br></br>
 - css
 - js
 - html
-- 
+- json
+- xml
+- c
 
 Of course this little piece of code can be easily integrated for your website to minify your program each time you update it.
 
