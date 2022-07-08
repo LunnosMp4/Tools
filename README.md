@@ -1,6 +1,12 @@
 # Minify
 I was tired of going to a website to transform my css into min.css so I made this little program.</br>
 I hope it will save you some time too !</br></br>
+**Langage Supported :**</br>
+- css
+- js
+- html
+- 
+
 Of course this little piece of code can be easily integrated for your website to minify your program each time you update it.
 
 ## Usage
