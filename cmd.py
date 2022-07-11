@@ -4,10 +4,18 @@
 # License: MIT
 
 from minify.minify import minify
+from converter.convert import convert
+from unminify.unminify import unminify
 
 def cmd():
     commands = {
         "min" : minify,
-        "minify" : minify
+        "minify" : minify,
+
+        "unmin" : unminify,
+        "unminify" : unminify,
+
+        "cvt" : convert,
+        "convert" : convert,
     }
     return commands

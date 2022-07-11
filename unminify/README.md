@@ -1,14 +1,12 @@
-# Minify
-
+# Unminify
+This little program can unminify some code.</br>
 **Langage Supported :**</br>
-- css
+- css WIP
 - js
-- html
-- json
-- xml
-- sql
-
-Of course this little piece of code can be easily integrated for your website to minify your program each time you update it.
+- html WIP
+- json WIP
+- xml WIP
+- sql WIP
 
 ## Usage
 
@@ -20,21 +18,18 @@ the output file will therefore be the same as the input one with the file extens
 Of course, if the file exists the result will be written in it, otherwise it will be created in the same location as the input file.
 
 ```bash
-  ./tools min exemple.css
+  ./tools unmin exemple.min.css
   
   > ls
-   exemple.css
    exemple.min.css
+   exemple.css
 ```
 
 ```bash
-  ./tools min file1.js file2.min.js
+  ./tools unmin file1.min.js file2.js
   
   > ls
-   file1.js
-   file2.min.js
+   file1.min.js
+   file2.js
 ```
 
-## API
-
-This program use the API from www.toptal.com for css, js and html langages.

@@ -3,7 +3,6 @@
 # https://github.com/LunnosMp4/Tools
 # License: MIT
 
-from minify.minify import minify
 from cmd import cmd
 import sys
 

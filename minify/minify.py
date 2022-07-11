@@ -3,7 +3,7 @@
 # https://github.com/LunnosMp4/Tools
 # License: MIT
 
-import sys, requests, json
+import sys, os, requests, json
 
 def minify_sql(input_file, output_file):
     with open(input_file, "r") as f:
@@ -67,6 +67,9 @@ def minify_js(input_file, output_file):
 
 def check_output(input_file):
     if (len(sys.argv) == 4):
+        if not os.path.isfile(sys.argv[3]):
+            print("Output file not found.")
+            sys.exit(1)
         return sys.argv[3]
     if input_file.endswith(".css"):
         return input_file.replace(".css", ".min.css")
@@ -78,8 +81,6 @@ def check_output(input_file):
         return input_file.replace(".json", ".min.json")
     if input_file.endswith(".xml"):
         return input_file.replace(".xml", ".min.xml")
-    if input_file.endswith(".c"):
-        return input_file.replace(".c", ".min.c")
     if input_file.endswith(".sql"):
         return input_file.replace(".sql", ".min.sql")
     
@@ -89,26 +90,23 @@ def minify():
         sys.exit(1)
 
     input_file = sys.argv[2]
+    if not os.path.isfile(input_file):
+        print("Input file not found.")
+        sys.exit(1)
     output_file = check_output(input_file)
 
     if input_file.endswith(".css"):
-        minify_css(input_file, output_file)
-        return
+        return minify_css(input_file, output_file)
     if input_file.endswith(".js"):
-        minify_js(input_file, output_file)
-        return
+        return minify_js(input_file, output_file)
     if input_file.endswith(".html"):
-        minify_html(input_file, output_file)
-        return
+        return minify_html(input_file, output_file)
     if input_file.endswith(".json"):
-        minify_json(input_file, output_file)
-        return
+        return minify_json(input_file, output_file)
     if input_file.endswith(".xml"):
-        minify_xml(input_file, output_file)
-        return
+        return minify_xml(input_file, output_file)
     if input_file.endswith(".sql"):
-        minify_sql(input_file, output_file)
-        return
+        return minify_sql(input_file, output_file)
     else:
         print("Unsupported file type")
         sys.exit(1)
