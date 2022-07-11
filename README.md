@@ -3,9 +3,9 @@ I was tired of going to a website to do some annoying things like minify code, c
 So I created this multiples tools programs, it will evolve and will and will have more and more tools available I will try to make it the easiest to use do not hesitate to contact me if you have ideas for new tools !
 I hope it will save you some time too !</br></br>
 **Commands Supported For Now:**</br>
-- minify
-- unminify
-- convert
+- [minify](https://github.com/LunnosMp4/Tools/tree/master/minify#readme)
+- [unminify](https://github.com/LunnosMp4/Tools/tree/master/unminify#readme)
+- [convert](https://github.com/LunnosMp4/Tools/tree/master/converter#readme)
 
 ## Usage
 
