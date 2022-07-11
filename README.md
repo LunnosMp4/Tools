@@ -20,7 +20,7 @@ A help command will be available in the future when there will have more tools a
 ```
 
 ```python
-  <tool>' names:
+  <tool> names:
 
   Minifier : "minify" or "min",
   Unminifier : "unminify" or "unmin",
