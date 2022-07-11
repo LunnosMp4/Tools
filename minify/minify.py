@@ -1,12 +1,22 @@
 #!/usr/bin/env python3
 # Copyright (c) 2022, Lunnos
-# https://github.com/LunnosMp4/Minify
+# https://github.com/LunnosMp4/Tools
 # License: MIT
 
 import sys, requests, json
 
-# Minify .xml / .c files (Comments not supported)
-def minify_oneline(input_file, output_file):
+def minify_sql(input_file, output_file):
+    with open(input_file, "r") as f:
+        data = f.read()
+    data = data.replace("\n", " ")
+    data = data.replace("    ", "")
+    data = data.replace("  ", "")
+    with open(output_file, "w") as f:
+        f.write(data)
+    print("Minified SQL file: " + output_file)
+
+# Minify .xml (Comments not supported)
+def minify_xml(input_file, output_file):
     with open(input_file, "r") as f:
         data = f.read()
     data = data.replace("\n", "")
@@ -16,7 +26,7 @@ def minify_oneline(input_file, output_file):
     data = data.replace("  ", "")
     with open(output_file, "w") as f:
         f.write(data)
-    print("Minified to One line file: " + output_file)
+    print("Minified XML file: " + output_file)
 
 # Minify .json files
 def minify_json(input_file, output_file):
@@ -56,8 +66,8 @@ def minify_js(input_file, output_file):
 
 
 def check_output(input_file):
-    if (len(sys.argv) == 3):
-        return sys.argv[2]
+    if (len(sys.argv) == 4):
+        return sys.argv[3]
     if input_file.endswith(".css"):
         return input_file.replace(".css", ".min.css")
     if input_file.endswith(".js"):
@@ -70,13 +80,15 @@ def check_output(input_file):
         return input_file.replace(".xml", ".min.xml")
     if input_file.endswith(".c"):
         return input_file.replace(".c", ".min.c")
+    if input_file.endswith(".sql"):
+        return input_file.replace(".sql", ".min.sql")
     
-def main():
-    if len(sys.argv) < 2 or len(sys.argv) > 3:
-        print("Usage: minify.h <input> <output>")
+def minify():
+    if len(sys.argv) < 3 or len(sys.argv) > 4:
+        print("Usage: minify <input> <output>")
         sys.exit(1)
 
-    input_file = sys.argv[1]
+    input_file = sys.argv[2]
     output_file = check_output(input_file)
 
     if input_file.endswith(".css"):
@@ -91,12 +103,12 @@ def main():
     if input_file.endswith(".json"):
         minify_json(input_file, output_file)
         return
-    if input_file.endswith(".xml") or input_file.endswith(".c"):
-        minify_oneline(input_file, output_file)
+    if input_file.endswith(".xml"):
+        minify_xml(input_file, output_file)
+        return
+    if input_file.endswith(".sql"):
+        minify_sql(input_file, output_file)
         return
     else:
         print("Unsupported file type")
         sys.exit(1)
-
-if __name__ == '__main__':
-    main()
