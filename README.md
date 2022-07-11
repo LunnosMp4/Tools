@@ -13,9 +13,9 @@ Of course this little piece of code can be easily integrated for your website to
 
 ## Usage
 
-First of all the program works the same way whether the file is a css file or a js file.</br>
+First of all the program works the same way whether the type of the file.</br>
 You can put as arguments a file as input and another as output or just an input and the name of
-the output file will therefore be the same as the input one with the file extension that changes (min.css / min.js).</br>
+the output file will therefore be the same as the input one with the file extension that changes.</br>
 
 
 Of course, if the file exists the result will be written in it, otherwise it will be created in the same location as the input file.
@@ -38,4 +38,4 @@ Of course, if the file exists the result will be written in it, otherwise it wil
 
 ## API
 
-This program use the API from www.toptal.com for css / js and html langages.
+This program use the API from www.toptal.com for css, js and html langages.
