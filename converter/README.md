@@ -2,19 +2,19 @@
 This program can convert lot of thigns.</br>
 **Conversion :**</br>
 
-**Number converter :**</br>
-    - Decimal</br>
-    - Hexadecimal</br>
-    - Binary</br>
-    - Octave</br></br>
+**Number converter :**
+- Decimal</br>
+- Hexadecimal
+- Binary
+- Octave</br></br>
 
-**Audio converter (WIP) :**</br>
-    - To mp3</br>
-    - To ogg</br>
-    - To wav</br>
-    - To flac</br>
-    - To aiff</br>
-    - To m4a</br></br>
+**Audio converter (WIP) :**
+- To mp3
+- To ogg
+- To wav
+- To flac
+- To aiff
+- To m4a</br></br>
 
 ## Usage
 
