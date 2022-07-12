@@ -1,6 +1,6 @@
 # Tools
 I was tired of going to a website to do some annoying things like minify code, convert audio file, obfuscate code, etc...</br>
-So I created this multiples tools programs, it will evolve and will and will have more and more tools available I will try to make it the easiest to use do not hesitate to contact me if you have ideas for new tools !
+So I created this multiples tools programs, it will evolve and will and will have more and more tools available I will try to make it the easiest to use do not hesitate to contact me if you have ideas for new tools !</br>
 I hope it will save you some time too !</br></br>
 **Commands Supported For Now:**</br>
 - [minify](https://github.com/LunnosMp4/Tools/tree/master/minify#readme)

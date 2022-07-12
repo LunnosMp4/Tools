@@ -16,6 +16,5 @@ def main():
     else:
         print("No command specified.")
 
-
 if __name__ == "__main__":
     main()

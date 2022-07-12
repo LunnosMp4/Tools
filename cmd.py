@@ -6,6 +6,7 @@
 from minify.minify import minify
 from converter.convert import convert
 from unminify.unminify import unminify
+from remover.remover import remover
 
 def cmd():
     commands = {
@@ -17,5 +18,8 @@ def cmd():
 
         "cvt" : convert,
         "convert" : convert,
+
+        "remove" : remover,
+        "rm" : remover, 
     }
     return commands

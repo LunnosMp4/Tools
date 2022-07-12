@@ -1,5 +1,5 @@
 # Convert
-This program can convert lot of thigns.</br>
+This program can convert lot of things.</br>
 **Conversion :**</br>
 
 **Number converter :**

@@ -4,54 +4,28 @@
 # License: MIT
 
 import sys
-
-# NUMBER CONVERTER
-def getnb():
-    if len(sys.argv) == 4:
-        nb = sys.argv[3]
-        return nb
-    nb = input("Enter an input : ")
-    return nb
-
-def binary(nb):
-    #TODO : check if nb is a binary number
-    base = int(nb, 2)
-    print("Hexadecimal :", hex(base))
-    print("Octal :", oct(base))
-    print("Decimal :", (int(base)))
-
-def hexadecimal(nb):
-    #TODO : check if nb is a hexadecimal number
-    base = int(nb, 16)
-    print("Binary : " + bin(base))
-    print("Octal : " + oct(base))
-    print("Decimal : " + base)
-
-def decimal(nb):
-    #TODO : check if nb is a decimal number
-    base = int(nb, 10)
-    print("Binary : " + bin(base))
-    print("Hexadecimal : " + hex(base))
-    print("Octal : " + oct(base))
-
-def octal(nb):
-    #TODO : check if nb is a octal number
-    base = int(nb, 8)
-    print("Binary : " + bin(base))
-    print("Hexadecimal : " + hex(base))
-    print("Decimal : " + base)
-
+from converter.number.number import *
+from converter.images.images import *
 
 def convert():
     if len(sys.argv) >= 3 and len(sys.argv) <= 4:
         if sys.argv[2] == "bin":
             return binary(getnb())
-        elif sys.argv[2] == "hex":
+        if sys.argv[2] == "hex":
             return hexadecimal(getnb())
-        elif sys.argv[2] == "dec":
+        if sys.argv[2] == "dec":
             return decimal(getnb())
-        elif sys.argv[2] == "oct":
+        if sys.argv[2] == "oct":
             return octal(getnb())
+        if sys.argv[2] == "jpg":
+            return images(sys.argv[3], "jpg")
+        if sys.argv[2] == "png":
+            return images(sys.argv[3], "png")
+        if sys.argv[2] == "jpeg":
+            return images(sys.argv[3], "jpeg")
+        if sys.argv[2] == "ico":
+            return images(sys.argv[3], "ico")
+
         else:
             print("Command not found.")
     else:
