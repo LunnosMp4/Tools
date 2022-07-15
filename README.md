@@ -1,11 +1,12 @@
 # Tools
-I was tired of going to a website to do some annoying things like minify code, convert audio file, obfuscate code, etc...</br>
+I was tired of going to a website to do some annoying things like minify code, convert audio/image file, obfuscate code, etc...</br>
 So I created this multiples tools programs, it will evolve and will and will have more and more tools available I will try to make it the easiest to use do not hesitate to contact me if you have ideas for new tools !</br>
 I hope it will save you some time too !</br></br>
 **Commands Supported For Now:**</br>
 - [minify](https://github.com/LunnosMp4/Tools/tree/master/minify#readme)
 - [unminify](https://github.com/LunnosMp4/Tools/tree/master/unminify#readme)
 - [convert](https://github.com/LunnosMp4/Tools/tree/master/converter#readme)
+- [remover](https://github.com/LunnosMp4/Tools/tree/master/remover#readme)
 
 ## Usage
 
@@ -16,7 +17,7 @@ A help command will be available in the future when there will have more tools a
 
 
 ```bash
-  ./tools <tool> <arguments for each tool>
+  ./tools <-tool> <arguments for each tool>
 ```
 
 ```python
@@ -25,5 +26,6 @@ A help command will be available in the future when there will have more tools a
   Minifier : "minify" or "min",
   Unminifier : "unminify" or "unmin",
   Converter : "convert" or "cvt",
+  Remover: "remove" or "rm"
 ```
 

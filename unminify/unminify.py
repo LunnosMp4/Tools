@@ -12,6 +12,21 @@ def unminify_js(input_file, output_file):
         f.write(data)
     print("Unminified file: " + output_file)
 
+def help():
+    return print("""
+    Unminify a file.
+    Usage (without output file):
+        -unmin <input>
+        --unminify <input file>
+    
+    Usage (with output file):
+        -unmin <input> <output>
+        --unminify <input file> <output file>
+
+    Supported file types:
+        .js
+    """)
+
 def check_output(input_file):
     if (len(sys.argv) == 4):
         if not os.path.isfile(sys.argv[3]):
@@ -35,6 +50,8 @@ def unminify():
     if len(sys.argv) < 3 or len(sys.argv) > 4:
         print("Usage: minify <input> <output>")
         sys.exit(1)
+    if sys.argv[2] == "-h" or sys.argv[2] == "--help":
+        return help()
     
     input_file = sys.argv[2]
     if not os.path.isfile(input_file):

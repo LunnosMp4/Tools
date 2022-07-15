@@ -64,6 +64,20 @@ def minify_js(input_file, output_file):
         f.write(result)
     print("Minified JS file: " + output_file)
 
+def help():
+    return print("""
+    Minify a file.
+    Usage (without output file):
+        -min <input>
+        --minify <input file>
+    
+    Usage (with output file):
+        -min <input> <output>
+        --minify <input file> <output file>
+
+    Supported file types:
+        .css, .js, .html, .json, .xml, .sql
+    """)
 
 def check_output(input_file):
     if (len(sys.argv) == 4):
@@ -88,6 +102,8 @@ def minify():
     if len(sys.argv) < 3 or len(sys.argv) > 4:
         print("Usage: minify <input> <output>")
         sys.exit(1)
+    if sys.argv[2] == "-h" or sys.argv[2] == "--help":
+        return help()
 
     input_file = sys.argv[2]
     if not os.path.isfile(input_file):

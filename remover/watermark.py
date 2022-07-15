@@ -27,6 +27,7 @@ def remove_watermark(image):
     image = image.convert("RGB")
     color_data = image.getdata()
 
+    img = 0
     new_color = []
     for item in color_data:
         if is_gray(item[0], item[1], item[2]):

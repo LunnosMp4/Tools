@@ -18,7 +18,7 @@ the output file will therefore be the same as the input one with the file extens
 Of course, if the file exists the result will be written in it, otherwise it will be created in the same location as the input file.
 
 ```bash
-  ./tools unmin exemple.min.css
+  ./tools -unmin exemple.min.css
   
   > ls
    exemple.min.css
@@ -26,7 +26,7 @@ Of course, if the file exists the result will be written in it, otherwise it wil
 ```
 
 ```bash
-  ./tools unmin file1.min.js file2.js
+  ./tools --unminify file1.min.js file2.js
   
   > ls
    file1.min.js

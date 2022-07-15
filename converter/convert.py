@@ -7,8 +7,25 @@ import sys
 from converter.number.number import *
 from converter.images.images import *
 
+def help():
+    return print("""
+    Convert a number to another base.
+    Usage:
+        -cvt <base> <number>
+        --convert <base> <number>
+        (base : bin, hex, dec, oct)
+    
+    Convert an image to another format.
+    Usage:
+        -cvt <format> <image>
+        --convert <format> <image>
+        (format : jpg, png, jpeg, ico)
+    """)
+
 def convert():
     if len(sys.argv) >= 3 and len(sys.argv) <= 4:
+        if sys.argv[2] == "-h" or sys.argv[2] == "--help":
+            return help()
         if sys.argv[2] == "bin":
             return binary(getnb())
         if sys.argv[2] == "hex":

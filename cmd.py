@@ -3,6 +3,7 @@
 # https://github.com/LunnosMp4/Tools
 # License: MIT
 
+from help import help as help
 from minify.minify import minify
 from converter.convert import convert
 from unminify.unminify import unminify
@@ -10,16 +11,19 @@ from remover.remover import remover
 
 def cmd():
     commands = {
-        "min" : minify,
-        "minify" : minify,
+        "-h" : help,
+        "--help" : help,
 
-        "unmin" : unminify,
-        "unminify" : unminify,
+        "-min" : minify,
+        "--minify" : minify,
 
-        "cvt" : convert,
-        "convert" : convert,
+        "-unmin" : unminify,
+        "--unminify" : unminify,
 
-        "remove" : remover,
-        "rm" : remover, 
+        "-cvt" : convert,
+        "--convert" : convert,
+
+        "-remove" : remover,
+        "--rm" : remover, 
     }
     return commands
