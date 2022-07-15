@@ -22,7 +22,7 @@ def help():
 
 def remover():
     if len(sys.argv) < 3:
-        print("Usage: remove <command>")
+        print("Usage: --remove <command>")
         sys.exit(1)
     if sys.argv[2] == "-h" or sys.argv[2] == "--help":
         return help()

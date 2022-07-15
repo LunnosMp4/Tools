@@ -23,7 +23,7 @@ def cmd():
         "-cvt" : convert,
         "--convert" : convert,
 
-        "-remove" : remover,
-        "--rm" : remover, 
+        "--remove" : remover,
+        "-rm" : remover, 
     }
     return commands

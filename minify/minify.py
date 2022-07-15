@@ -100,7 +100,7 @@ def check_output(input_file):
     
 def minify():
     if len(sys.argv) < 3 or len(sys.argv) > 4:
-        print("Usage: minify <input> <output>")
+        print("Usage: --minify <input> <output>")
         sys.exit(1)
     if sys.argv[2] == "-h" or sys.argv[2] == "--help":
         return help()
