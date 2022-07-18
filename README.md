@@ -8,6 +8,25 @@ I hope it will save you some time too !</br></br>
 - [convert](https://github.com/LunnosMp4/Tools/tree/master/converter#readme)
 - [remover](https://github.com/LunnosMp4/Tools/tree/master/remover#readme)
 
+## Install
+
+For Windows :
+
+```bash
+  git clone https://github.com/LunnosMp4/Tools.git
+  cd Tools
+  ./setup/install.ps1
+```
+</br>
+For Linux :
+
+```bash
+  git clone https://github.com/LunnosMp4/Tools.git
+  cd Tools
+  ./setup/install.sh
+```
+</br>
+
 ## Usage
 
 Here is some example for main usage.</br>

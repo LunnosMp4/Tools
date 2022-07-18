@@ -3,7 +3,7 @@
 # https://github.com/LunnosMp4/Tools
 # License: MIT
 
-import sys, os, torch
+import sys, torch
 # from rembg.bg import remove
 
 def background():
