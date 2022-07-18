@@ -8,7 +8,7 @@ from PIL import Image
 
 def images(input_file, ext):
     if not os.path.isfile(input_file):
-        print("Input file is not a file.")
+        print("Input file is not a file or doesn't exist.")
         sys.exit(1)
 
     output = os.path.splitext(input_file)[0] + "_converted." + ext

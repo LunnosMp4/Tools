@@ -6,6 +6,7 @@
 import sys
 from converter.number.number import *
 from converter.images.images import *
+from converter.audio.audio import *
 
 def help():
     return print("""
@@ -26,6 +27,8 @@ def convert():
     if len(sys.argv) >= 3 and len(sys.argv) <= 4:
         if sys.argv[2] == "-h" or sys.argv[2] == "--help":
             return help()
+
+        # NUMBER CONVERTER
         if sys.argv[2] == "bin":
             return binary(getnb())
         if sys.argv[2] == "hex":
@@ -34,6 +37,8 @@ def convert():
             return decimal(getnb())
         if sys.argv[2] == "oct":
             return octal(getnb())
+
+        # IMAGE CONVERTER
         if sys.argv[2] == "jpg":
             return images(sys.argv[3], "jpg")
         if sys.argv[2] == "png":
@@ -42,6 +47,20 @@ def convert():
             return images(sys.argv[3], "jpeg")
         if sys.argv[2] == "ico":
             return images(sys.argv[3], "ico")
+
+        # AUDIO CONVERTER
+        if sys.argv[2] == "mp3":
+            return audio(sys.argv[3], "mp3")
+        if sys.argv[2] == "wav":
+            return audio(sys.argv[3], "wav")
+        if sys.argv[2] == "flac":
+            return audio(sys.argv[3], "flac")
+        if sys.argv[2] == "ogg":
+            return audio(sys.argv[3], "ogg")
+        if sys.argv[2] == "m4a":
+            return audio(sys.argv[3], "m4a")
+        if sys.argv[2] == "aiff":
+            return audio(sys.argv[3], "aiff")
 
         else:
             print("Command not found.")

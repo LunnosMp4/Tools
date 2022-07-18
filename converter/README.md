@@ -48,11 +48,11 @@ This example below will convert a file.png to a file.jpg</br>
 
 This example below will convert a file.ogg to a file.mp3</br>
 ```bash
-  ./tools --convert audio mp3 file.ogg
+  ./tools --convert mp3 file.ogg
 
   > ls
    file.ogg
-   file.mp3
+   file_converted.mp3
 ```
 
 
